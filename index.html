@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Raleway" rel="stylesheet">
+    <link rel ="stylesheet" type="text/css" href="css/main.css"/> 
+  </head>
+  <body>
+    <header>Welcome to CloudSpeaker.</header>
+    <form method="POST" action="accounts/checklogin.php">
+      <div align="center">
+        <table>
+          <tr>
+            <td>Account Name: </td>
+            <td><input type="text" name="username"></td>
+          <tr>
+            <td>Password: </td>
+            <td><input type="text" name="password"></td>
+        </table>
+        <input type="submit" value="Sign in">
+      </div>
+    </form>
+    <hr>
+    <form method="POST" action="accounts/submit.php">
+      <div align="center">
+        <table>
+          <tr>
+            <td>Account Name: </td>
+            <td><input type="text" name="username"></td>
+          <tr>
+            <td>Email: </td>
+            <td><input type="text" name="email"></td>
+          <tr>
+            <td>Password: </td>
+            <td><input type="text" name="password"></td>
+        </table>
+        <input type="submit" value="Sign up">
+      </div>
+    </form>
+  </body>
+</html>

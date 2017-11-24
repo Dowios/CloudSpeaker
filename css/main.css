@@ -1,0 +1,32 @@
+body {
+  background-image: url("../img/header.jpg");
+  background-size: cover;
+}
+
+
+header {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-family: Nunito;
+  font-size: 60px;
+  color: #fff;
+  text-shadow: 0 0 3px;
+}
+
+form *{
+  font-family: Raleway;
+}
+
+form div table tr td{
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 0 0 1px;
+  align: left;
+}
+
+@media only screen and (max-width: 800px) {
+  header {
+    font-size: 40px;
+  }
+}
