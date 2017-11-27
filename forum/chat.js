@@ -55,7 +55,7 @@ function updateChat(){
                             $('#chat-area').append($("<p>"+ data.text[i] +"</p>"));
                         }								  
 				   }
-				   document.getElementById('chat-area').scrollTop = document.getElementById('chat-area').scrollHeight;
+				   //document.getElementById('chat-area').scrollTop = document.getElementById('chat-area').scrollHeight;
 				   instanse = false;
 				   state = data.state;
 			   },

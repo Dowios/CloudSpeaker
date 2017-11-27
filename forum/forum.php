@@ -90,7 +90,17 @@
         
         <p id="name-area"></p>
         
-        <div id="chat-wrap"><div id="chat-area"></div></div>
+        <div id="chat-wrap"><div id="chat-area">
+            <?php
+                $myfile = fopen("chat.txt", "r") or die("Unable to open file!");
+                // Output one line until end-of-file
+                while(!feof($myfile)) {
+                  echo "<p>".fgets($myfile)."</p>";
+                }
+                fclose($myfile);
+            ?>
+    
+        </div></div>
         
         <form id="send-message-area">
             <p>Your message: </p>
