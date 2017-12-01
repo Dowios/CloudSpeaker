@@ -7,14 +7,16 @@
     
     <title>Chat</title>
     
+    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css" />
     
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="chat.js"></script>
     <script type="text/javascript">
-    
+         var chat =  new Chat();
+        $(document).ready(function(){
         // ask user for name with popup prompt    
-        //var name = "<?php echo $_SESSION['myusername']; ?>";
+            var name = '<?php echo $_SESSION['myusername']; ?>';
         
         // default name is 'Guest'
     	/*if (!name || name === ' ') {
@@ -25,14 +27,9 @@
     	//name = name.replace(/(<([^>]+)>)/ig,"");
     	
     	// display name on page
-    	$("#name-area").text("123");
-    	
-    	// kick off chat
-        
-        var chat =  new Chat();
-    	$(function() {
-    	
-    		 chat.getState(); 
+    	    $('#name-area').append("You are: <span>" + name + "</span>");
+            var chat =  new Chat();
+            chat.getState(); 
     		 
     		 // watch textarea for key presses
              $("#sendie").keydown(function(event) {  
@@ -75,40 +72,34 @@
     				
     			}
              });
-            
-    	});
+        });
     </script>
 
-    <script type="text/javascript">
-        $("#name-area").append("123");
-    </script>
 </head>
 
 <body onload="setInterval('chat.update()', 1000)">
 
     <div id="page-wrap">
-    
-        <h2>Welcome</h2>
-        
-        <p id="name-area">
-        </p>
-        
+        <header>
+            <p id="name-area"></p>
+            <br />
+            <h2>Welcome to Tutorial</h2>
+        </header>
         <div id="chat-wrap"><div id="chat-area">
             <?php
                 $myfile = fopen("chat.txt", "r") or die("Unable to open file!");
                 // Output one line until end-of-file
-                while(!feof($myfile)) {
-                  echo "<div>".fgets($myfile)."</div>";
+                while($dia = fgets($myfile)) {
+                  echo "<div>".$dia."<img src=\"images/plus.png\"></img></div>";
                 }
                 fclose($myfile);
             ?>
-    
-        </div></div>
-        
-        <form id="send-message-area">
-            <p>Your message: </p>
-            <textarea id="sendie" maxlength = '100' ></textarea>
-        </form>
+
+            <form id="send-message-area">
+                <textarea id="sendie" maxlength = '100' ></textarea>
+            </form>
+        </div>
+    </div>
     
     </div>
 

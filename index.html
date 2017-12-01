@@ -3,13 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>Hello</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="jquery-3.2.1.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nunito|Raleway" rel="stylesheet">
     <link rel ="stylesheet" type="text/css" href="css/main.css"/> 
+    <script type="text/javascript">
+      
+      $(document).ready(function(){
+        $("#signin").click(function(){
+          $("#upform").hide();
+          $("#inform").show();
+        });
+        $("#signup").click(function(){
+          $("#inform").hide();
+          $("#upform").show();
+        });
+      });
+    </script>
   </head>
   <body>
     <header>Welcome to CloudSpeaker.</header>
-    <form method="POST" action="accounts/checklogin.php">
+    <div id="selector">
+      <button id="signin">Login</button>
+      <button id="signup">New to Here?</button>
+    </div>
+    <form method="POST" action="accounts/checklogin.php" id="inform">
       <div align="center">
         <table>
           <tr>
@@ -22,8 +39,7 @@
         <input type="submit" value="Sign in">
       </div>
     </form>
-    <hr>
-    <form method="POST" action="accounts/submit.php">
+    <form method="POST" action="accounts/submit.php" hidden="hidden" id="upform">
       <div align="center">
         <table>
           <tr>

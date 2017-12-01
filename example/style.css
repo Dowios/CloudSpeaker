@@ -1,0 +1,37 @@
+*                               { margin: 0; padding: 0; }
+body                            { font: 16px Source Sans Pro; background: url(images/header.jpg); background-attachment: fixed; background-size: cover;}
+h2                              { color: rgb(32, 65, 116); font: 40px Caveat Brush; margin: 0 0 5px 0;}
+#page-wrap                      { width: 500px; margin: 30px auto; position: relative; }
+
+#chat-wrap                      {margin: 0;} /* border: 1px solid #eee; */
+#chat-area                      { overflow: auto; padding: 20px;} /*background: white;*/
+#chat-area span              { color: white; 
+    background: rgb(32, 65, 116); 
+    padding: 4px 8px; 
+    position: relative; 
+    font-size: 12px;
+    border-radius: 10px 0 0 0;
+    top: -6px;
+    left: -10px;
+}
+#chat-area img {
+    position: absolute;
+    /*display: block;
+    float: right;*/
+    width: 10px;
+    height: 10px;
+    right: 0px;
+    bottom: 0px;
+}
+
+#chat-area div                   {  position: relative;padding: 10px; background-color: #fff; margin: 10 0; border-radius: 10px; box-shadow:1px 1px 1px rgb(32, 65, 116);}
+
+#name-area                      {color: white; font: bold 12px Source Sans Pro;}   
+#name-area span                 { color: rgb(32, 65, 116); }
+
+#send-message-area            {width: 100%; color: white; font-size: 14px; }
+#sendie                         {display:block;  width: 100%; padding: 10px; background-color: #fff; margin: 10 auto; border-radius: 10px; box-shadow:1px 1px 1px rgb(32, 65, 116); font-family: Source Sans Pro;}
+
+@media only screen and (max-width: 550px) {
+    #page-wrap                      { width: 90%; margin: 30px auto; position: relative; }
+  }

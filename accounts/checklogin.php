@@ -39,7 +39,7 @@ $_SESSION["myusername"] = $myusername;
 $_SESSION["mypassword"] = $mypassword;
 //session_register("myusername");
 //session_register("mypassword"); 
-header("location:../forum/forum.php");
+header("location:../example/forum.php");
 }
 else {
 echo "Wrong Username or Password";

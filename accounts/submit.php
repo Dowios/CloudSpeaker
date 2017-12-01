@@ -23,7 +23,7 @@ $mypassword=$_POST['password'];
 
 // To protect MySQL injection (more detail about MySQL injection)
 $myusername = stripslashes($myusername);
-$myemail = stripslashes($mypassword);
+$myemail = stripslashes($myemail);
 $mypassword = stripslashes($mypassword);
 $myusername = mysqli_real_escape_string($con,$myusername);
 $myemail = mysqli_real_escape_string($con,$myemail);
@@ -37,5 +37,5 @@ $_SESSION["myemail"] = $myemail;
 $_SESSION["mypassword"] = $mypassword;
 //session_register("myusername");
 //session_register("mypassword"); 
-header("location:../forum/forum.php");
+header("location:../example/forum.php");
 ?>
